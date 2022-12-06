@@ -1,0 +1,15 @@
+{% extends 'accounts/abase.html' %}
+
+{%  block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+    <h2>register </h2>
+    <form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+        {{ form.as_div }}
+        <!-- input:submit *tab* -->
+        <input type="submit" value="Register">
+    </form>
+{% endblock %}

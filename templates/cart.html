@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    cart
+{% endblock %}
+
+{% load static %}
+c
+{% block body %}
+    <h1>cart</h1>
+   {% for items in my_cart %}
+        <p>{{ items }}</p>
+    {% endfor %}
+    {% comment %}<div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for items in my_cart %}
+            <div class="col-4 col-md-3">
+                <div class="card h-100">
+                     <img src="#" class="card-img-top" alt="{{ items.items.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ items.items }} </h5>
+                    </div>
+                </div>
+            </div>
+            <p>1</p>
+        {% endfor %}
+    </div>{% endcomment %}
+{% endblock %}
