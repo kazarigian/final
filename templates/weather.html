@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+<body>
+{% block body %}
+    <div class="container-fluid">
+                <h1 class="display-4"> Weather </h1>
+                <p class="col-md-6 fs-3">
+                    {{ data.current.temp_f }}
+                    {% if data.current.temp_f < 40 %}
+                        <p> Wear a Coat!</p>
+                        <p>
+                            <button class="btn btn-info btn-lg" type="button">
+                                <a class=""href="{% url 'coats' %}"> Get coats </a></button>
+                        </p>
+                        <p>
+                            <button class="btn btn-info btn-lg" type="button">
+                                <a href="{% url 'gloves' %}"> Get gloves </a></button>
+                        </p>
+                        <p>
+                            <button class="btn btn-info btn-lg" type="button">
+                                <a href="{% url 'scarves' %}"> Get scarves </a></button>
+                        </p>
+                        <p>
+                            <button class="btn btn-info btn-lg" type="button">
+                                <a href="{% url 'boots' %}"> Get boots </a></button>
+                        </p>
+                        <p>
+                            <button class="btn btn-info btn-lg" type="button">
+                                <a href="{% url 'hats' %}"> Get hats </a></button>
+                        </p>
+                        <p>
+                            <button class="btn btn-info btn-lg" type="button">
+                                <a href="{% url 'shirts' %}"> Get an ugly sweater! </a></button>
+                        </p>
+                    {% else %}
+                        Do you want a Shirt and Shorts!
+                        <a href="{% url 'shirts' %}"> Get Shirts </a>
+                    {% endif %}
+                <div class="col-4">
+                    <button class="btn btn-dark btn-lg" type="button"> Click to Refresh</button>
+                    <div id="info">
+                    </div>
+                </div>
+        </div>
+
+{% endblock %}
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+<script>
+    const myurl =
+    {% url 'coats' %}
+
+</script>
+<script src="../static/js/js.js"></script>

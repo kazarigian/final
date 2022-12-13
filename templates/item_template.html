@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+    coats
+{% endblock %}
+
+{% load static %}
+
+{% block body %}
+    <h1>{{ type }}</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for item in items %}
+            <div class="col-4 col-md-3">
+                <div class="card h-100">
+                     <a href="{% url 'item' item.id %}"><img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}"></a>
+                    <div class="card-body">
+                        <a href="{% url 'item' item.id %}"><h5 class="card-title"> {{ item.name }} </h5></a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+    </div>
+{% endblock %}
