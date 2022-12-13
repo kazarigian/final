@@ -38,9 +38,9 @@ class Cart(models.Model):
     quantity = models.IntegerField(null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # one to many
     purchased = models.BooleanField(default=False)
-
-    def __str__(self):
-        return self.user
+    #
+    # def __str__(self):
+    #     return self.user
 
 
 class Checkout(models.Model):

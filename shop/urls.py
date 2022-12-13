@@ -11,12 +11,12 @@ urlpatterns = [
     path('gloves/', views.gloves, name='gloves'),
     path('hats/', views.hats, name='hats'),
     path('scarves/', views.scarves, name='scarves'),
-    path('cart/<int:user_id>', views.cart, name='cart'),
+    path('cart/', views.cart, name='cart'),
     path('checkout/', views.checkout, name='checkout'),
-    path('item/<int:item_id>', views.product_details, name='item'),
-    path('aboutus/', views.aboutus, name='aboutus')
+    path('item/<int:item_id>', views.item, name='item'),
+    path('aboutus/', views.aboutus, name='aboutus'),
+    path('weather/', views.weather, name='weather'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-#  <int:quantity_num>

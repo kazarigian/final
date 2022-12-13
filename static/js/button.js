@@ -1,7 +1,7 @@
-$('button').click(addToCart)
+$('#aie').click(addToCart)
 
 function addToCart(){
-    Item.objects.create()
-    
+    //$.ajax()
+  //  Items.create(user=request.user, item=)
 
 }

@@ -1,14 +1,34 @@
 body{
     background-color: lightskyblue;
     padding: 10px;
+    justify-content: center;
 }
 h1{
     color: mediumpurple;
 }
 a{
     text-decoration: none;
+    color: #01254b;
 }
 h2{
     background-color: darkslateblue;
     color: white;
+    border: 2px solid hotpink;
+    width: fit-content;
+}
+#specific_img{
+    width: 75%;
+    border: 3px solid #66afde;
+    border-radius: 15px;
+}
+#cart_img{
+    width: 55%;
+    border: 3px solid #c800ff;
+    border-radius: 15px;
+}
+#endnav{
+    justify-content: end;
+}
+img{
+    margin: 0 auto;
 }
